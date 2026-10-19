@@ -1,0 +1,80 @@
+- generic [ref=e23]:
+  - generic [ref=e24]:
+    - img "logo" [ref=e25] [cursor=pointer]
+    - paragraph [ref=e26] [cursor=pointer]: Scripted QA
+    - button "Sign Out" [ref=e27] [cursor=pointer]
+  - generic [ref=e28]:
+    - complementary [ref=e29]:
+      - heading "Categories" [level=2] [ref=e30]
+      - list [ref=e31]:
+        - listitem [ref=e32]:
+          - link "Table" [ref=e33] [cursor=pointer]:
+            - /url: /webTable
+        - listitem [ref=e34]:
+          - link "Dropdown" [ref=e35] [cursor=pointer]:
+            - /url: /dropDown
+        - listitem [ref=e36]:
+          - link "Alerts & Windows" [ref=e37] [cursor=pointer]:
+            - /url: /alertsAndWindows
+        - listitem [ref=e38]:
+          - link "Frame" [ref=e39] [cursor=pointer]:
+            - /url: /frame
+        - listitem [ref=e40]:
+          - link "Form" [ref=e41] [cursor=pointer]:
+            - /url: /form
+        - listitem [ref=e42]:
+          - link "Calender" [ref=e43] [cursor=pointer]:
+            - /url: /calender
+        - listitem [ref=e44]:
+          - link "Mouse Actions" [ref=e45] [cursor=pointer]:
+            - /url: /mouseActions
+        - listitem [ref=e46]:
+          - link "Shopping" [ref=e47] [cursor=pointer]:
+            - /url: /shopping
+    - generic [ref=e119]:
+      - generic [ref=e120]:
+        - heading "Products" [level=1] [ref=e121]
+        - 'button "Checkout Items: 1" [ref=e302] [cursor=pointer]':
+          - generic [ref=e123]: "Checkout Items:"
+          - generic [ref=e124]: "1"
+      - generic [ref=e125]:
+        - textbox "Search products..." [ref=e127]
+        - combobox [ref=e129] [cursor=pointer]:
+          - option "All Categories"
+          - option "electronics" [selected]
+          - option "Fruits"
+          - option "Vegitables"
+          - option "Sports & Fitness"
+        - combobox [ref=e131] [cursor=pointer]:
+          - option "All Prices"
+          - option "Under $25"
+          - option "$25 to $50"
+          - option "$50 to $100"
+          - option "$100 to $500" [selected]
+          - option "Over $500"
+        - button "Reset Filters" [ref=e253] [cursor=pointer]
+      - generic [ref=e132]:
+        - generic [ref=e270]:
+          - generic [ref=e271]:
+            - img "Headphones" [ref=e272]
+            - generic [ref=e273]: electronics
+          - generic [ref=e274]: Headphones
+          - generic [ref=e275]:
+            - generic [ref=e276]: $200
+            - button "Add to Cart (1)" [active] [ref=e303] [cursor=pointer]
+        - generic [ref=e278]:
+          - generic [ref=e279]:
+            - img "Microwave Oven" [ref=e280]
+            - generic [ref=e281]: electronics
+          - generic [ref=e282]: Microwave Oven
+          - generic [ref=e283]:
+            - generic [ref=e284]: $290
+            - button "Add to Cart" [ref=e285] [cursor=pointer]
+        - generic [ref=e294]:
+          - generic [ref=e295]:
+            - img "Smartwatch" [ref=e296]
+            - generic [ref=e297]: electronics
+          - generic [ref=e298]: Smartwatch
+          - generic [ref=e299]:
+            - generic [ref=e300]: $499
+            - button "Add to Cart" [ref=e301] [cursor=pointer]

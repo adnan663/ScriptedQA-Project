@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Playwright Extent Report</title>
+  <style>
+    :root { color-scheme: light; font: 14px/1.5 "Segoe UI", sans-serif; color: #1f2937; background: #f4f6f8; }
+    body { max-width: 1200px; margin: 32px auto; padding: 0 20px; }
+    header { display: flex; justify-content: space-between; align-items: end; border-bottom: 1px solid #d8dee6; padding-bottom: 18px; }
+    h1 { margin: 0; font-size: 26px; }
+    .meta { color: #596579; }
+    .summary { display: flex; gap: 12px; margin: 20px 0; }
+    .summary div { min-width: 110px; padding: 12px 16px; background: white; border: 1px solid #d8dee6; border-radius: 4px; }
+    .summary strong { display: block; font-size: 22px; }
+    table { width: 100%; border-collapse: collapse; background: white; }
+    th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid #e5e9ef; vertical-align: top; }
+    th { background: #eef2f6; }
+    .status { font-weight: 700; text-transform: uppercase; }
+    .passed { color: #18794e; } .failed, .timedOut { color: #b42318; }
+    .skipped, .interrupted, .pending, .undefined { color: #946200; }
+    pre { white-space: pre-wrap; margin: 0; color: #b42318; }
+    @media (max-width: 760px) { body { margin-top: 16px; } .summary { flex-wrap: wrap; } table { font-size: 12px; } th, td { padding: 8px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div><h1>Playwright Extent Report</h1><div class="meta">Cucumber Playwright scenarios</div></div>
+    <div class="meta">Generated 10/16/2026, 6:30:06 PM | Run status: failed</div>
+  </header>
+  <section class="summary" aria-label="Run summary">
+    <div><strong>4</strong>Total</div>
+    <div><strong>2</strong>Passed</div>
+    <div><strong>2</strong>Failed</div>
+    <div><strong>0</strong>Skipped</div>
+    <div><strong>20.83s</strong>Duration</div>
+  </section>
+  <table>
+    <thead><tr><th>Test</th><th>Project</th><th>Status</th><th>Duration</th><th>Errors</th></tr></thead>
+    <tbody>
+    <tr>
+      <td>Cart page core functionality &gt; Cart displays item details and correct totals</td>
+      <td>Chrome</td>
+      <td><span class="status failed">failed</span></td>
+      <td>9.95s</td>
+      <td><pre>Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoHaveCount[2m([22m[32mexpected[39m[2m)[22m failed
+
+Locator:  getByText(&#39;$20.00&#39;, { exact: true })
+Expected: [32m3[39m
+Received: [31m0[39m
+Timeout:  5000ms
+
+Call log:
+[2m  - Expect &quot;toHaveCount&quot; getByText(&#39;$20.00&#39;, { exact: true }) with timeout 5000ms[22m
+[2m  - waiting for getByText(&#39;$20.00&#39;, { exact: true })[22m
+[2m    14 × locator resolved to 0 elements[22m
+[2m       - unexpected value &quot;0&quot;[22m
+
+    at captureRawStack (D:\Scripted QA project\tests\node_modules\playwright-core\lib\coreBundle.js:9282:17)
+    at callMatcherAsStep (D:\Scripted QA project\tests\node_modules\playwright\lib\matchers\expect.js:13316:57)
+    at Object.toHaveCount (D:\Scripted QA project\tests\node_modules\playwright\lib\matchers\expect.js:13308:23)
+    at PlaywrightWorld.&lt;anonymous&gt; (D:\Scripted QA project\tests\step-definitions\cart.steps.js:19:50)</pre></td>
+    </tr>
+    <tr>
+      <td>Cart page core functionality &gt; Clear Cart removes items and shows the empty state</td>
+      <td>Chrome</td>
+      <td><span class="status passed">passed</span></td>
+      <td>4.79s</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Cart page core functionality &gt; Back to Shopping returns to the product catalog</td>
+      <td>Chrome</td>
+      <td><span class="status passed">passed</span></td>
+      <td>3.62s</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Cart page core functionality &gt; Place Order displays successful confirmation</td>
+      <td>Chrome</td>
+      <td><span class="status failed">failed</span></td>
+      <td>8.67s</td>
+      <td><pre>Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeHidden[2m([22m[2m)[22m failed
+
+Locator:  getByRole(&#39;heading&#39;, { name: /Bill/ })
+Expected: hidden
+Received: visible
+Timeout:  5000ms
+
+Call log:
+[2m  - Expect &quot;toBeHidden&quot; getByRole(&#39;heading&#39;, { name: /Bill/ }) with timeout 5000ms[22m
+[2m  - waiting for getByRole(&#39;heading&#39;, { name: /Bill/ })[22m
+[2m    14 × locator resolved to &lt;h1 class=&quot;text-xl sm:text-2xl font-bold text-slate-800&quot;&gt;🧾 Bill&lt;/h1&gt;[22m
+[2m       - unexpected value &quot;visible&quot;[22m
+
+    at captureRawStack (D:\Scripted QA project\tests\node_modules\playwright-core\lib\coreBundle.js:9282:17)
+    at callMatcherAsStep (D:\Scripted QA project\tests\node_modules\playwright\lib\matchers\expect.js:13316:57)
+    at Object.toBeHidden (D:\Scripted QA project\tests\node_modules\playwright\lib\matchers\expect.js:13308:23)
+    at PlaywrightWorld.&lt;anonymous&gt; (D:\Scripted QA project\tests\step-definitions\cart.steps.js:60:43)</pre></td>
+    </tr></tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "scripted-qa-bdd-tests",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "npm run test:playwright && npm run test:cucumber",
+    "test:playwright": "playwright test --config playwright.config.js",
+    "test:cucumber": "node runner.js"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@playwright/test": "^1.64.1",
+    "playwright": "^1.64.1"
+  }
+}

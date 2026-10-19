@@ -1,0 +1,20 @@
+- generic [ref=f1e4]:
+  - img "logo" [ref=f1e6]
+  - generic [ref=f1e7]:
+    - generic [ref=f1e8]: Scripted QA
+    - generic [ref=f1e9]: Your QA Automation Playground
+  - generic [ref=f1e10]:
+    - generic [ref=f1e11]:
+      - paragraph [ref=f1e12]: Credentials
+      - generic [ref=f1e13]:
+        - generic [ref=f1e14]:
+          - text: "User:"
+          - strong [ref=f1e15]: admin
+        - generic [ref=f1e16]:
+          - text: "Pass:"
+          - strong [ref=f1e17]: Pass@9211
+    - heading "Sign In" [level=1] [ref=f1e18]
+    - textbox "Username" [ref=f1e19]: invalid-user
+    - textbox "Password" [ref=f1e20]: wrong-password
+    - paragraph [ref=f1e21]: Oops! The credentials are incorrect.
+    - button "Sign In" [active] [ref=f1e22] [cursor=pointer]

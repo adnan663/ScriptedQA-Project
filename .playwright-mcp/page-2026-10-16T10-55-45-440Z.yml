@@ -1,0 +1,38 @@
+- generic [ref=e23]:
+  - generic [ref=e24]:
+    - img "logo" [ref=e25] [cursor=pointer]
+    - paragraph [ref=e26] [cursor=pointer]: Scripted QA
+    - button "Sign Out" [ref=e27] [cursor=pointer]
+  - generic [ref=e28]:
+    - complementary [ref=e29]:
+      - heading "Categories" [level=2] [ref=e30]
+      - list [ref=e31]:
+        - listitem [ref=e32]:
+          - link "Table" [ref=e33] [cursor=pointer]:
+            - /url: /webTable
+        - listitem [ref=e34]:
+          - link "Dropdown" [ref=e35] [cursor=pointer]:
+            - /url: /dropDown
+        - listitem [ref=e36]:
+          - link "Alerts & Windows" [ref=e37] [cursor=pointer]:
+            - /url: /alertsAndWindows
+        - listitem [ref=e38]:
+          - link "Frame" [ref=e39] [cursor=pointer]:
+            - /url: /frame
+        - listitem [ref=e40]:
+          - link "Form" [ref=e41] [cursor=pointer]:
+            - /url: /form
+        - listitem [ref=e42]:
+          - link "Calender" [ref=e43] [cursor=pointer]:
+            - /url: /calender
+        - listitem [ref=e44]:
+          - link "Mouse Actions" [ref=e45] [cursor=pointer]:
+            - /url: /mouseActions
+        - listitem [ref=e46]:
+          - link "Shopping" [ref=e47] [cursor=pointer]:
+            - /url: /shopping
+    - generic [ref=e424]:
+      - generic [ref=e425]:
+        - heading "🧾 Bill" [level=1] [ref=e426]
+        - button "Back to Shopping" [ref=e429]
+      - paragraph [ref=e450]: Your cart is empty.

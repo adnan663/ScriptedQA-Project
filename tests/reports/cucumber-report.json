@@ -1,0 +1,292 @@
+[
+  {
+    "description": "  Verify cart totals, clearing, return navigation, and order confirmation.",
+    "elements": [
+      {
+        "description": "",
+        "id": "cart-page-core-functionality;cart-displays-item-details-and-correct-totals",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Cart displays item details and correct totals",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1283868100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open Cart and authenticate with one Headphones item",
+            "match": {
+              "location": "step-definitions\\cart.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2949368899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the cart shows Headphones quantity and totals",
+            "match": {
+              "location": "step-definitions\\cart.steps.js:16"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5047971400,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('$20.00', { exact: true })\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m0\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByText('$20.00', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('$20.00', { exact: true })\u001b[22m\n\u001b[2m    14 × locator resolved to 0 elements\u001b[22m\n\u001b[2m       - unexpected value \"0\"\u001b[22m\n\n    at captureRawStack (D:\\Scripted QA project\\tests\\node_modules\\playwright-core\\lib\\coreBundle.js:9282:17)\n    at callMatcherAsStep (D:\\Scripted QA project\\tests\\node_modules\\playwright\\lib\\matchers\\expect.js:13316:57)\n    at Object.toHaveCount (D:\\Scripted QA project\\tests\\node_modules\\playwright\\lib\\matchers\\expect.js:13308:23)\n    at PlaywrightWorld.<anonymous> (D:\\Scripted QA project\\tests\\step-definitions\\cart.steps.js:19:50)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the cart actions are available",
+            "match": {
+              "location": "step-definitions\\cart.steps.js:23"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 664037800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "cart-page-core-functionality;clear-cart-removes-items-and-shows-the-empty-state",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Clear Cart removes items and shows the empty state",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1525985200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I open Cart and authenticate with one Headphones item",
+            "match": {
+              "location": "step-definitions\\cart.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2643180600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I clear the cart",
+            "match": {
+              "location": "step-definitions\\cart.steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 126132599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the cart empty state is displayed",
+            "match": {
+              "location": "step-definitions\\cart.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46632299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I can return to Shopping",
+            "match": {
+              "location": "step-definitions\\cart.steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5451000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 441514399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "cart-page-core-functionality;back-to-shopping-returns-to-the-product-catalog",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Back to Shopping returns to the product catalog",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 989435300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I open Cart and authenticate with one Headphones item",
+            "match": {
+              "location": "step-definitions\\cart.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2060436799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I return to Shopping from the cart",
+            "match": {
+              "location": "step-definitions\\cart.steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51412099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the product catalog is displayed",
+            "match": {
+              "location": "step-definitions\\cart.steps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 93337300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 428979599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "cart-page-core-functionality;place-order-displays-successful-confirmation",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Place Order displays successful confirmation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 951648499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "I open Cart and authenticate with one Headphones item",
+            "match": {
+              "location": "step-definitions\\cart.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2151786000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I place the order",
+            "match": {
+              "location": "step-definitions\\cart.steps.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 133178499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "the successful order confirmation is displayed",
+            "match": {
+              "location": "step-definitions\\cart.steps.js:57"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5033530600,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('heading', { name: /Bill/ })\nExpected: hidden\nReceived: visible\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByRole('heading', { name: /Bill/ }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: /Bill/ })\u001b[22m\n\u001b[2m    14 × locator resolved to <h1 class=\"text-xl sm:text-2xl font-bold text-slate-800\">🧾 Bill</h1>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n    at captureRawStack (D:\\Scripted QA project\\tests\\node_modules\\playwright-core\\lib\\coreBundle.js:9282:17)\n    at callMatcherAsStep (D:\\Scripted QA project\\tests\\node_modules\\playwright\\lib\\matchers\\expect.js:13316:57)\n    at Object.toBeHidden (D:\\Scripted QA project\\tests\\node_modules\\playwright\\lib\\matchers\\expect.js:13308:23)\n    at PlaywrightWorld.<anonymous> (D:\\Scripted QA project\\tests\\step-definitions\\cart.steps.js:60:43)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 403115499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "cart-page-core-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Cart page core functionality",
+    "tags": [],
+    "uri": "features\\cart.feature"
+  }
+]

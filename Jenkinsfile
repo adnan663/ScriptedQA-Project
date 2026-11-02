@@ -1,40 +1,54 @@
+
 pipeline {
-  agent {
-    docker {
-      image 'mcr.microsoft.com/playwright:v1.64.1-noble'
+    agent any
+
+    environment {
+        CI = 'true'
+        HEADLESS = 'true'
     }
-  }
 
-  environment {
-    CI = 'true'
-    HEADLESS = 'true'
-  }
+    options {
+        timestamps()
+    }
 
-  options {
-    timestamps()
-  }
+    stages {
 
-  stages {
-    stage('Install dependencies') {
-      steps {
-        dir('tests') {
-          sh 'npm ci'
+        stage('Check Node and NPM') {
+            steps {
+                bat 'node --version'
+                bat 'npm --version'
+            }
         }
-      }
-    }
 
-    stage('Run Playwright tests') {
-      steps {
-        dir('tests') {
-          sh 'npm test'
+        stage('Install Dependencies') {
+            steps {
+                dir('tests') {
+                    bat 'npm ci'
+                }
+            }
         }
-      }
-    }
-  }
 
-  post {
-    always {
-      archiveArtifacts artifacts: 'tests/reports/**, tests/test-results/**', allowEmptyArchive: true
+        stage('Install Playwright Browsers') {
+            steps {
+                dir('tests') {
+                    bat 'npx playwright install chromium'
+                }
+            }
+        }
+
+        stage('Run Playwright Tests') {
+            steps {
+                dir('tests') {
+                    bat 'npm test'
+                }
+            }
+        }
     }
-  }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'tests/reports/**, tests/test-results/**',
+                             allowEmptyArchive: true
+        }
+    }
 }

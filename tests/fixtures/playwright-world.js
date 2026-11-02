@@ -16,7 +16,6 @@ setDefaultTimeout(30_000);
 class PlaywrightWorld extends World {
   async start() {
     this.browser = await chromium.launch({
-      channel: 'chrome',
       headless: process.env.HEADLESS !== 'false',
     });
     this.context = await this.browser.newContext();
